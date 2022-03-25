@@ -1,12 +1,12 @@
+import { Link } from "next-theme-ui";
 import { Box, Container, Flex, Heading, NavLink } from "theme-ui";
 
 export const Header = () => (
-  <Box sx={{ background: "muted", color: "background" }}>
-    <Container>
-      <Heading>KS Airsoft Ry</Heading>
-      <Flex sx={{ gap: 2 }}>
-        <NavLink href={"/"}>Home</NavLink>
-      </Flex>
-    </Container>
-  </Box>
+  <Container>
+    <Box sx={{ background: "primary", color: "white", p: 3 }}>
+      <Link href={"/"} sx={{ textDecoration: "none", color: "white" }}>
+        <Heading>ksairsoft ry</Heading>
+      </Link>
+    </Box>
+  </Container>
 );

@@ -1,5 +1,5 @@
 // example theme.js
-export default {
+export const theme = {
   fonts: {
     body: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
     heading: '"Avenir Next", sans-serif',
@@ -7,10 +7,13 @@ export default {
   },
   colors: {
     text: "#000",
-    background: "#fff",
-    primary: "#33e",
-    muted: "#b91",
+    background: "#f5f3f1",
+    primary: "#726250",
+    muted: "#eae7e4",
+    white: "#fff",
+    secondary: "#ccc6be",
   },
+
   layout: {
     container: {
       maxWidth: ["100%", "80%", "60%"],
