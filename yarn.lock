@@ -4223,6 +4223,11 @@ type-fest@^0.8.1:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.8.1.tgz#09e249ebde851d3b1e48d27c105444667f17b83d"
   integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
 
+typecript@^0.0.1-security:
+  version "0.0.1-security"
+  resolved "https://registry.yarnpkg.com/typecript/-/typecript-0.0.1-security.tgz#b363125e19f0516e927d99aa1546044cc0cb9595"
+  integrity sha512-88WUWdO0zl/cC+X44m7TJkNssn0sTwZOSAyZu7ZmY6BfGJ4idVWJGjFmd6wEjS3yhWUYrAszzNMHZMIJ7h3ycg==
+
 typedarray-to-buffer@^3.1.5:
   version "3.1.5"
   resolved "https://registry.yarnpkg.com/typedarray-to-buffer/-/typedarray-to-buffer-3.1.5.tgz#a97ee7a9ff42691b9f783ff1bc5112fe3fca9080"
