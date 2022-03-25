@@ -22,7 +22,6 @@
     "theme-ui": "^0.14.1"
   },
   "devDependencies": {
-    "@bjerk/eslint-config": "^2.0.1",
     "@cobraz/prettier": "^2.0.0",
     "@tsconfig/node16": "^1.0.2",
     "@types/jest": "^27.4.1",
