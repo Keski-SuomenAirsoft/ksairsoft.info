@@ -14,7 +14,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Heading>Welcome to KS Airsoft's new website</Heading>
+      <Heading>Welcome to KS Airsoft</Heading>
 
       <Paragraph>
         Get started by editing <br />
