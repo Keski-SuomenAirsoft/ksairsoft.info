@@ -2,7 +2,7 @@ See the webpage here: https://ksairsoft-info.vercel.app/
 
 # Welcome to the Github repository for Keski-Suomen Airsoft's Website!
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). This project uses TypeScript, `theme-ui` and `contentlayer`. The site is hosted on Vercel.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). This project uses TypeScript, [Theme UI](https://theme-ui.com/) and [ContentLayer](https://github.com/contentlayerdev/contentlayer), among other packages. The site is hosted on Vercel.
 
 The vision for this project is to set up a site that can easily be maintained by non-developers through markdown, while using powerful, cutting edge web technology which allows for developing performant and powerful functionality.
 
