@@ -3,8 +3,6 @@ import { ThemeProvider } from "theme-ui";
 import { Layout } from "../components/layout";
 import { theme } from "../theme";
 
-import { allPages } from "contentlayer/generated";
-
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
