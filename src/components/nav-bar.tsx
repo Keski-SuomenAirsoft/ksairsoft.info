@@ -1,22 +1,12 @@
 import { Box, Flex, NavLink, Text } from "theme-ui";
-import { allPages, Page } from "contentlayer/generated";
-import { GetStaticProps } from "next";
+import { allPages } from "contentlayer/generated";
+import { useRouter } from "next/router";
 
-interface NavBarProps {
-  pages: Page[];
-}
+export const NavBar: React.FC = () => {
+  const router = useRouter();
+  const pathname = router.asPath.slice(1);
+  const pages = allPages.sort((postA, postB) => postA.sort - postB.sort);
 
-export const getStaticProps: GetStaticProps<NavBarProps> = async () => {
-  const sortedPages = allPages.sort((postA, postB) => postA.sort - postB.sort);
-
-  return {
-    props: {
-      pages: sortedPages,
-    },
-  };
-};
-
-export const NavBar: React.FC<NavBarProps> = ({ pages }) => {
   return (
     <Flex
       sx={{
@@ -30,7 +20,13 @@ export const NavBar: React.FC<NavBarProps> = ({ pages }) => {
       <Box sx={{ p: 2 }}>
         <Flex sx={{ flexDirection: "column", gap: 1 }}>
           {pages.map((post, idx) => (
-            <NavLink key={idx} href={`/${post.slug}`}>
+            <NavLink
+              key={idx}
+              href={`/${post.slug}`}
+              sx={{
+                color: pathname === post.slug ? "secondary" : "text",
+              }}
+            >
               {post.title}
             </NavLink>
           ))}
