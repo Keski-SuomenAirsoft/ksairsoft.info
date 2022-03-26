@@ -8,6 +8,12 @@ export const Page = defineDocumentType(() => ({
     slug: { type: "string", required: true },
     sort: { type: "number", required: true },
   },
+  computedFields: {
+    url: {
+      type: "string",
+      resolve: (page) => `/${page._raw.flattenedPath}`,
+    },
+  },
 }));
 
 export default makeSource({

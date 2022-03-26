@@ -1,21 +1,43 @@
-import { allPages } from "contentlayer/generated";
+import { allPages, Page } from "contentlayer/generated";
 import { NextPage } from "next";
-import { useRouter } from "next/router";
 import { PageBox } from "src/components/page-box";
+import { GetStaticProps } from "next";
+import { ParsedUrlQuery } from "querystring";
+import { GetStaticPaths } from "next";
+interface Params extends ParsedUrlQuery {
+  slug: string;
+}
+interface ContentPageProps {
+  mdPage: Page;
+}
 
-const PageLayout: NextPage = () => {
-  const router = useRouter();
-  const { slug } = router.query;
+export const getStaticProps: GetStaticProps<ContentPageProps, Params> = async (
+  context
+) => {
+  const { slug } = context.params!;
+  const page = allPages.find((page) => page._raw.flattenedPath === slug);
 
-  const post = allPages.find((post) => {
-    console.log(post._raw.flattenedPath);
-    console.log(slug);
-    return post._raw.flattenedPath === slug;
-  });
-
-  if (post) {
-    return <PageBox post={post} />;
-  } else return <>Not found</>;
+  if (page) {
+    return {
+      props: {
+        mdPage: page,
+      },
+    };
+  } else {
+    throw new Error("Page was not found");
+  }
 };
+
+export const getStaticPaths: GetStaticPaths<Params> = () => {
+  const paths = allPages.map((page) => page.url);
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+const PageLayout: NextPage<ContentPageProps> = ({ mdPage }) => (
+  <PageBox post={mdPage} />
+);
 
 export default PageLayout;
