@@ -1,6 +1,8 @@
-https://braaar.github.io/ksairsoft.info/
+See the webpage here: https://ksairsoft-info.vercel.app/
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). This project uses `theme-ui`, `contentlayer`
+# Welcome to the Github repository for Keski-Suomen Airsoft's Website!
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). This project uses TypeScript, `theme-ui` and `contentlayer`. The site is hosted on Vercel.
 
 ## Making changes
 
