@@ -1,4 +1,5 @@
 import { Page } from "contentlayer/generated";
+import Head from "next/head";
 import { Box, Flex } from "theme-ui";
 
 export interface PageBoxProps {
@@ -7,27 +8,32 @@ export interface PageBoxProps {
 
 export const PageBox: React.FC<PageBoxProps> = ({ post }) => {
   return (
-    <Flex
-      sx={{
-        flexDirection: "column",
-        backgroundColor: "muted",
-      }}
-    >
-      <Box
+    <>
+      <Head>
+        <title>{`ksairsoft - ${post.title}`}</title>
+      </Head>
+      <Flex
         sx={{
-          textAlign: "center",
-          backgroundColor: "secondary",
-          color: "white",
-          px: 2,
-          py: 1,
+          flexDirection: "column",
+          backgroundColor: "muted",
         }}
       >
-        {post.title}
-      </Box>
-      <Box
-        sx={{ px: 3 }}
-        dangerouslySetInnerHTML={{ __html: post.body.html }}
-      ></Box>
-    </Flex>
+        <Box
+          sx={{
+            textAlign: "center",
+            backgroundColor: "secondary",
+            color: "white",
+            px: 2,
+            py: 1,
+          }}
+        >
+          {post.title}
+        </Box>
+        <Box
+          sx={{ px: 3 }}
+          dangerouslySetInnerHTML={{ __html: post.body.html }}
+        ></Box>
+      </Flex>
+    </>
   );
 };
