@@ -3,7 +3,6 @@ import { Header } from "./header";
 import { Footer } from "./footer";
 import Head from "next/head";
 import { NavBar } from "./nav-bar";
-import { MainContentBox } from "./main-content-box";
 import { SponsorBox } from "./sponsor-box";
 
 export const Layout: React.FC = ({ children }) => {
@@ -22,9 +21,7 @@ export const Layout: React.FC = ({ children }) => {
             <Box sx={{ minWidth: "15rem" }}>
               <NavBar />
             </Box>
-            <Box sx={{ flex: 2 }}>
-              <MainContentBox>{children}</MainContentBox>
-            </Box>
+            <Box sx={{ flex: 2 }}>{children}</Box>
             <Box sx={{ minWidth: "15rem", flex: 1 }}>
               <SponsorBox />
             </Box>

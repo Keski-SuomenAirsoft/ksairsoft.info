@@ -8,6 +8,8 @@ const withMDX = require("@next/mdx")({
   },
 });
 
+const { withContentlayer } = require("next-contentlayer");
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -18,4 +20,4 @@ const nextConfig = {
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
 };
 
-module.exports = withMDX(nextConfig);
+module.exports = withContentlayer()(nextConfig);
