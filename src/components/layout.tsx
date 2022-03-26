@@ -3,7 +3,6 @@ import { Header } from "./header";
 import { Footer } from "./footer";
 import Head from "next/head";
 import { NavBar } from "./nav-bar";
-import { MainContentBox } from "./main-content-box";
 import { SponsorBox } from "./sponsor-box";
 
 export const Layout: React.FC = ({ children }) => {
