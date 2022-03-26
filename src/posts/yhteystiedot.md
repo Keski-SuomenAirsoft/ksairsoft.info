@@ -1,3 +1,9 @@
+---
+title: Yhteystiedot
+slug: yhteystiedot
+sort: 7
+---
+
 ## Lähetä yhdistykselle sähköpostia:
 
 [**ksairsoft@gmail.com**](mailto:ksairsoft@gmail.com)

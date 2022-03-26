@@ -1,3 +1,9 @@
+---
+title: Etusivu
+slug: ''
+sort: 1
+---
+
 ## Tervetuloa!
 
 Tervetuloa Keski-Suomen airsoft ry:n sivuille! Täältä löydät tietoa yhdistyksestä ja sen järjestämistä airsoft-tapahtumista.

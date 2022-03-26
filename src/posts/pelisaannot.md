@@ -1,3 +1,10 @@
+---
+title: Pelisaannot
+slug: pelisaannot
+sort: 5
+---
+
+
 ## 1. Yleistä
 
 ### 1.1 Suojaimet

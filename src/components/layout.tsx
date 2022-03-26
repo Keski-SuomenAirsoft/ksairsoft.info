@@ -22,9 +22,7 @@ export const Layout: React.FC = ({ children }) => {
             <Box sx={{ minWidth: "15rem" }}>
               <NavBar />
             </Box>
-            <Box sx={{ flex: 2 }}>
-              <MainContentBox>{children}</MainContentBox>
-            </Box>
+            <Box sx={{ flex: 2 }}>{children}</Box>
             <Box sx={{ minWidth: "15rem", flex: 1 }}>
               <SponsorBox />
             </Box>

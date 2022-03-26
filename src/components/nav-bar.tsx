@@ -1,6 +1,7 @@
 import { Box, Flex, NavLink, Text } from "theme-ui";
-
+import { allPosts } from "contentlayer/generated";
 export const NavBar: React.FC = () => {
+  const sortedPosts = allPosts.sort((postA, postB) => postA.sort - postB.sort);
   return (
     <Flex
       sx={{
@@ -13,14 +14,11 @@ export const NavBar: React.FC = () => {
       </Box>
       <Box sx={{ p: 2 }}>
         <Flex sx={{ flexDirection: "column", gap: 1 }}>
-          <NavLink href={"/"}>Etusivu</NavLink>
-          <NavLink href={"/yhdistys"}>Yhdistys</NavLink>
-          <NavLink href={"/jasenhakemus"}>Jäsenhakemus</NavLink>
-          <NavLink href={"/airsoft"}>Airsoft?</NavLink>
-          <NavLink href={"/pelisaannot"}>Pelisäännöt</NavLink>
-          <NavLink href={"/ukk"}>UKK / FAQ</NavLink>
-          <NavLink href={"/yhteystiedot"}>Yhteystiedot</NavLink>
-          <NavLink href={"/pelit"}>Tulevat pelit</NavLink>
+          {sortedPosts.map((post, idx) => (
+            <NavLink key={idx} href={`/${post.slug}`}>
+              {post.title}
+            </NavLink>
+          ))}
         </Flex>
       </Box>
     </Flex>

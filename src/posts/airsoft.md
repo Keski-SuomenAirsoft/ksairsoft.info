@@ -1,4 +1,8 @@
-import { Image } from "theme-ui";
+---
+title: "Airsoft"
+slug: "airsoft"
+sort: 4
+---
 
 ## Mitä airsoft on?
 
@@ -12,7 +16,8 @@ Aseiden heikko teho mahdollistaa niiden turvallisen käytön toista pelaajaa vas
 
 #### Pelimuodoista
 
-<Image src={"/images/airsoft_info2.jpeg"} sx={{ float: "right" }} />
+![Airsoft 2](/images/airsoft_info2.jpeg)
+
 Airsoft-pelejä voi kuvata vaikka taistelusimulaatioksi, joskin touhu ei yleensä tuon
 termin vakavuuden asteelle pääse. Yleisesti tarkoituksena on osua vastustajan pelaajaa
 kuulalla, jolloin osuman saanut poistuu pelistä. Tosin pelivariaatioita on lukemattomia,

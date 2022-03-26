@@ -1,4 +1,8 @@
-import { Link } from "theme-ui";
+---
+title: Yhdistys
+slug: 'yhdistys'
+sort: 2
+---
 
 ## Keski-Suomen airsoft ry
 

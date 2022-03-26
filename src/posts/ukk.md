@@ -1,3 +1,10 @@
+---
+title: UKK / FAQ
+slug: ukk
+sort: 6
+---
+
+
 ## Airsoft
 
 #### Mitä on airsoft?
