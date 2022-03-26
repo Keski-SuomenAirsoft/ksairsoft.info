@@ -1,14 +1,13 @@
-import { Box, Flex } from "theme-ui";
-import { allPosts } from "contentlayer/generated";
+import { allPages } from "contentlayer/generated";
 import { NextPage } from "next";
 import { useRouter } from "next/router";
 import { PageBox } from "src/components/page-box";
 
-const PostLayout: NextPage = () => {
+const PageLayout: NextPage = () => {
   const router = useRouter();
   const { slug } = router.query;
 
-  const post = allPosts.find((post) => {
+  const post = allPages.find((post) => {
     console.log(post._raw.flattenedPath);
     console.log(slug);
     return post._raw.flattenedPath === slug;
@@ -19,4 +18,4 @@ const PostLayout: NextPage = () => {
   } else return <>Not found</>;
 };
 
-export default PostLayout;
+export default PageLayout;

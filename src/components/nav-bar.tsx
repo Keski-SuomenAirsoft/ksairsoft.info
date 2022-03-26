@@ -1,7 +1,7 @@
 import { Box, Flex, NavLink, Text } from "theme-ui";
-import { allPosts } from "contentlayer/generated";
+import { allPages } from "contentlayer/generated";
 export const NavBar: React.FC = () => {
-  const sortedPosts = allPosts.sort((postA, postB) => postA.sort - postB.sort);
+  const sortedpages = allPages.sort((postA, postB) => postA.sort - postB.sort);
   return (
     <Flex
       sx={{
@@ -14,7 +14,7 @@ export const NavBar: React.FC = () => {
       </Box>
       <Box sx={{ p: 2 }}>
         <Flex sx={{ flexDirection: "column", gap: 1 }}>
-          {sortedPosts.map((post, idx) => (
+          {sortedpages.map((post, idx) => (
             <NavLink key={idx} href={`/${post.slug}`}>
               {post.title}
             </NavLink>

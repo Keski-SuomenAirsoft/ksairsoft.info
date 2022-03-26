@@ -1,8 +1,8 @@
-import { Post } from "contentlayer/generated";
+import { Page } from "contentlayer/generated";
 import { Box, Flex } from "theme-ui";
 
 export interface PageBoxProps {
-  post: Post;
+  post: Page;
 }
 
 export const PageBox: React.FC<PageBoxProps> = ({ post }) => {
