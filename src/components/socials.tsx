@@ -16,10 +16,7 @@ export const Socials: React.FC = () => {
       </Box>
       <Box sx={{ p: 2, maxWidth: "100%" }}>
         <Flex sx={{ gap: 2 }}>
-          <Link
-            href="http://www.facebook.com/?ref=home#!/pages/Keski-Suomen-Airsoft-Ry/247713627239?ref=ts"
-            target={"_blank"}
-          >
+          <Link href="https://www.facebook.com/ksairsoft" target={"_blank"}>
             <SiFacebook size={48} color={theme.colors.primary} />
           </Link>
           <Link href="https://discordapp.com/invite/RDCAeB8" target={"_blank"}>
