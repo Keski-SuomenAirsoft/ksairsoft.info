@@ -22,4 +22,4 @@ Peetu Luiro
 Arttu Seppi
 
 **Hallituksen varajäsenet:**  
-Jussi Alvoittu, Jonne Saarinen
+Jussi Alvoittu, Jonne Saarinen, Joonas Myllylä, Vili Hokka, Braage Sekse Aarset
