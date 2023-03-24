@@ -75,7 +75,7 @@ Mikäli pääset yllättämään vastapuolen pelaajan lähietäisyydeltä, voit 
 
 Voit pudottaa vastapuolen pelaajan koskettamalla häntä kädellä ja sanomalla ”PUUKKO”. Tällöin hän putoaa pelistä.
 
-### 2.7 Puukotus sääntö
+### 2.7 Kranaatti sääntö
 
 Yhdistyksen peleissä sallittuja kranaatteja ovat: savukranaatit ja kuulakranaatit, joista ei lähde kovaa ääntä tai valoa (kranaatista pitää lähteä kuulia tai savua)
 Kranaattia heitettäessä tulee tietää minne, kranaattia ollaan heittämässä
