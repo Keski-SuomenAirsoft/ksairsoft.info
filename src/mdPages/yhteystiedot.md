@@ -16,10 +16,10 @@ Samuli Rinne
 [040 9669 277](tel:+358409669277)
 
 **Varapuheenjohtaja:**  
-Peetu Luiro
+Jussi Alvoittu
 
 **Sihteeri ja rahastonhoitaja:**  
 Arttu Seppi
 
 **Hallituksen varajäsenet:**  
-Jussi Alvoittu, Jonne Saarinen, Joonas Myllylä, Vili Hokka, Braage Sekse Aarset
+Riku Koponen, Vili Hokka, Braage Sekse Aarset
