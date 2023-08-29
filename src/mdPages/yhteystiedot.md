@@ -22,4 +22,4 @@ Jussi Alvoittu
 Arttu Seppi
 
 **Hallituksen varajäsenet:**  
-Riku Koponen, Vili Hokka, Braage Sekse Aarset
+Riku Koponen, Peetu Luiro, Vili Hokka, Braage Sekse Aarset
