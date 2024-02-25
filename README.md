@@ -13,7 +13,7 @@ The vision for this project is to set up a site that can easily be maintained by
 In this project, we use markdown and the [`contentlayer`](https://github.com/contentlayerdev/contentlayer) package to allow simple and easy editing of the page content.
 Markdown is a simple, but quite powerful markup language to format a text document. The text you are reading right now was written in markdown!
 
-> - You can do *all* **sorts** of ~stuff~ things with markdown!
+> - You can do _all_ **sorts** of ~stuff~ things with markdown!
 
 ### The front matter
 
@@ -21,22 +21,21 @@ At the top of each markdown file, we have a front matter. It provides some infor
 
 Here's a quick reference of the front matter:
 
-| field   | Description | required |
-| ------- |------------ | -------- |
-| `title` | A title for the page, displayed in the title box above the page content, and used as the name for the navigation bar element | yes |
-| `slug`  | The url for the page. Try to stick to using a-z, 0-9 and hyphen (`-`), otherwise the URLs might break or simply look ugly | yes |
-| `sort`  | a number, used for sorting the navigation bar element. Lowest number first | yes |
+| field   | Description                                                                                                                  | required |
+| ------- | ---------------------------------------------------------------------------------------------------------------------------- | -------- |
+| `title` | A title for the page, displayed in the title box above the page content, and used as the name for the navigation bar element |  yes     |
+| `slug`  | The url for the page. Try to stick to using a-z, 0-9 and hyphen (`-`), otherwise the URLs might break or simply look ugly    | yes      |
+| `sort`  | a number, used for sorting the navigation bar element. Lowest number first                                                   |  yes     |
 
 ### Editing in the browser
 
-1. Navigate to the [`src/mdPages`](https://github.com/braaar/ksairsoft.info/tree/main/src/mdPages) folder.
+1. Navigate to the [`src/markdown-pages`](https://github.com/braaar/ksairsoft.info/tree/main/src/markdown-pages) folder.
 
 2. Click on the page you want to edit.
 
 3. Click the pencil icon to begin editing.
 
 4. Make the changes you want (see [this guide](https://www.markdownguide.org/getting-started/) for how to use markdown to format the page)
-
 
 ### Editing in an IDE
 

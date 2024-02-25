@@ -17,6 +17,6 @@ export const Page = defineDocumentType(() => ({
 }));
 
 export default makeSource({
-  contentDirPath: "src/mdPages",
+  contentDirPath: "src/markdown-pages",
   documentTypes: [Page],
 });
