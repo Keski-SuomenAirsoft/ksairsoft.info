@@ -71,11 +71,11 @@ Tiputtuasi:
 2.6 ”LAUKAUS!”-huuto sääntö
 Mikäli pääset yllättämään vastapuolen pelaajan lähietäisyydeltä, voit halutessa osoittaa häntä aseella ja huutaa kuuluvalla äänellä ”LAUKAUS!”. Tällöin toinen pelaaja putoaa pelistä pois (katso kohta 2.5 Pelistä putoaminen) Mikäli hän ei reagoi ”LAUKAUS!” huutoon, ammu häntä turvaetäisyydet huomioon ottaen.
 
-### 2.7 Puukotus sääntö
+### 2.6 Puukotus sääntö
 
 Voit pudottaa vastapuolen pelaajan koskettamalla häntä kädellä ja sanomalla ”PUUKKO”. Tällöin hän putoaa pelistä.
 
-### 2.7 Puukotus sääntö
+### 2.7 Kranaatti sääntö
 
 Yhdistyksen peleissä sallittuja kranaatteja ovat: savukranaatit ja kuulakranaatit, joista ei lähde kovaa ääntä tai valoa (kranaatista pitää lähteä kuulia tai savua)
 Kranaattia heitettäessä tulee tietää minne, kranaattia ollaan heittämässä
