@@ -1,4 +1,4 @@
-import { Box, Container, Flex } from "theme-ui";
+import { Box, Container, Flex, Grid } from "theme-ui";
 import { Header } from "./header";
 import { Footer } from "./footer";
 import Head from "next/head";
@@ -18,16 +18,16 @@ export const Layout: React.FC = ({ children }) => {
           <Header />
         </Box>
         <Container sx={{ flex: "1 1 auto" }}>
-          <Flex sx={{ flexDirection: ["column", "row"], gap: 3 }}>
-            <Flex sx={{ minWidth: "15rem", flexDirection: "column", gap: 3 }}>
+          <Grid columns={[1, "1fr 2fr 1fr"]} sx={{ gap: 3 }}>
+            <Flex sx={{ flexDirection: "column", gap: 3 }}>
               <NavBar />
               <Socials />
             </Flex>
             <Box sx={{ flex: 2 }}>{children}</Box>
-            <Box sx={{ minWidth: "15rem", flex: 1 }}>
+            <Box sx={{ flex: 1 }}>
               <SponsorBox />
             </Box>
-          </Flex>
+          </Grid>
         </Container>
 
         <Box>

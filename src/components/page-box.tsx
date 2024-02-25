@@ -16,6 +16,7 @@ export const PageBox: React.FC<PageBoxProps> = ({ post }) => {
         sx={{
           flexDirection: "column",
           backgroundColor: "muted",
+          borderRadius: "soft",
         }}
       >
         <Box
@@ -25,6 +26,7 @@ export const PageBox: React.FC<PageBoxProps> = ({ post }) => {
             color: "white",
             px: 2,
             py: 1,
+            borderRadius: "softTop",
           }}
         >
           {post.title}

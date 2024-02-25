@@ -16,7 +16,7 @@ export const theme = {
 
   layout: {
     container: {
-      maxWidth: ["100%", "80%", "60%"],
+      maxWidth: ["100%", "800px", "1200px"],
       px: [4, 0, 0],
     },
   },
@@ -25,5 +25,10 @@ export const theme = {
       fontFamily: "body",
       fontWeight: "body",
     },
+  },
+  radii: {
+    soft: "8px",
+    softTop: "8px 8px 0 0",
+    softBottom: "0 0 8px 8px",
   },
 };
