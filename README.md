@@ -19,6 +19,16 @@ Markdown is a simple, but quite powerful markup language to format a text docume
 
 At the top of each markdown file, we have a front matter. It provides some information about the page so that Next and contentlayer can put the page in the NavBar, set the title of the page, etc.
 
+Here's an example front matter:
+
+```
+---
+title: Tulevat pelit
+slug: pelit
+sort: 8
+---
+```
+
 Here's a quick reference of the front matter:
 
 | field   | Description                                                                                                                  | required |
