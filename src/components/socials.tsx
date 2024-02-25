@@ -9,9 +9,18 @@ export const Socials: React.FC = () => {
       sx={{
         flexDirection: "column",
         backgroundColor: "muted",
+        borderRadius: "soft",
       }}
     >
-      <Box sx={{ backgroundColor: "primary", color: "white", px: 2, py: 1 }}>
+      <Box
+        sx={{
+          backgroundColor: "primary",
+          color: "white",
+          px: 2,
+          py: 1,
+          borderRadius: "softTop",
+        }}
+      >
         <Text>Sosiaalinen media</Text>
       </Box>
       <Box sx={{ p: 2, maxWidth: "100%" }}>
