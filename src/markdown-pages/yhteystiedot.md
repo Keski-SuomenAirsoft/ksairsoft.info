@@ -16,10 +16,10 @@ Samuli Rinne
 [040 9669 277](tel:+358409669277)
 
 **Varapuheenjohtaja:**  
-Jussi Alvoittu
+Erno Ikonen
 
 **Sihteeri ja rahastonhoitaja:**  
 Arttu Seppi
 
 **Hallituksen varajäsenet:**  
-Riku Koponen, Peetu Luiro, Vili Hokka, Joonas Myllylä, Tommi Hiles, Elmeri Mäkelä
+Riku Koponen, Elmeri Mäkelä, Tommi Hiles, Jussi Alvoittu
