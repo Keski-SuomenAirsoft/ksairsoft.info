@@ -151,65 +151,7 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"pages": {
-"airsoft.md": {
-	id: "airsoft.md";
-  slug: "airsoft";
-  body: string;
-  collection: "pages";
-  data: InferEntrySchema<"pages">
-} & { render(): Render[".md"] };
-"etusivu.md": {
-	id: "etusivu.md";
-  slug: "";
-  body: string;
-  collection: "pages";
-  data: InferEntrySchema<"pages">
-} & { render(): Render[".md"] };
-"jasenhakemus.md": {
-	id: "jasenhakemus.md";
-  slug: "jasenhakemus";
-  body: string;
-  collection: "pages";
-  data: InferEntrySchema<"pages">
-} & { render(): Render[".md"] };
-"pelisaannot.md": {
-	id: "pelisaannot.md";
-  slug: "pelisaannot";
-  body: string;
-  collection: "pages";
-  data: InferEntrySchema<"pages">
-} & { render(): Render[".md"] };
-"pelit.md": {
-	id: "pelit.md";
-  slug: "pelit";
-  body: string;
-  collection: "pages";
-  data: InferEntrySchema<"pages">
-} & { render(): Render[".md"] };
-"ukk.md": {
-	id: "ukk.md";
-  slug: "ukk";
-  body: string;
-  collection: "pages";
-  data: InferEntrySchema<"pages">
-} & { render(): Render[".md"] };
-"yhdistys.md": {
-	id: "yhdistys.md";
-  slug: "yhdistys";
-  body: string;
-  collection: "pages";
-  data: InferEntrySchema<"pages">
-} & { render(): Render[".md"] };
-"yhteystiedot.md": {
-	id: "yhteystiedot.md";
-  slug: "yhteystiedot";
-  body: string;
-  collection: "pages";
-  data: InferEntrySchema<"pages">
-} & { render(): Render[".md"] };
-};
-
+		
 	};
 
 	type DataEntryMap = {
@@ -218,5 +160,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = typeof import("../../src/content/config.js");
+	export type ContentConfig = never;
 }

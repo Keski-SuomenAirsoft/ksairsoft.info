@@ -1,12 +1,10 @@
 ---
 import Header from "../components/Header.astro";
 
-import { getCollection } from "astro:content";
-
-const pages = await getCollection("pages");
+const pages = Object.values(import.meta.glob("../pages/*.md", { eager: true }));
 
 const sortedPages = pages.sort(
-  (a, b) => (a.data.sort || 0) - (b.data.sort || 0),
+  (a, b) => (a.frontmatter.sort || 0) - (b.frontmatter.sort || 0),
 );
 ---
 
@@ -36,16 +34,18 @@ const sortedPages = pages.sort(
                   style="display: flex; flex-direction: column; gap: 8px; list-style: none; margin: 0; padding: 0;"
                 >
                   {
-                    sortedPages.map((page) => (
-                      <li>
-                        <a
-                          href={page.data.slug ? `/${page.data.slug}` : "/"}
-                          style="text-decoration: none; color: inherit;"
-                        >
-                          {page.data.title}
-                        </a>
-                      </li>
-                    ))
+                    sortedPages
+                      .filter((p) => p.slug)
+                      .map((page) => (
+                        <li>
+                          <a
+                            href={`/${page.url}`}
+                            style="text-decoration: none; color: inherit;"
+                          >
+                            {page.data.title}
+                          </a>
+                        </li>
+                      ))
                   }
                 </ul>
               </div>

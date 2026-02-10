@@ -1,4 +1,5 @@
 ---
+layout: ../layouts/Layout.astro
 title: Pelisaannot
 slug: pelisaannot
 sort: 5
@@ -46,11 +47,11 @@ Mikäli huomaat vaaratilanteen (suojaimet tippuvat, pelinulkopuolisia pelialueel
 -Varmista aseesi
 -Ole paikallasi, kunnes pelinjärjestäjä ohjeistaa toisin tai kuulet ”PELI JATKUU!” huudon.
 
-### 2.2 Pelin aloitus.
+### 2.2 Pelin aloitus
 
 Peli alkaa, kun kumpikin osapuoli on ilmaissut olevansa valmis ennalta sovitulla huudolla, kuten "VALMIS!". Ennen tätä huutoa on kaikilla osapuolen henkilöillä oltava suojaimet päässä. Kun kumpikin osapuoli on valmis, voidaan peli käynnistää huudolla "PELI KÄY!".
 
-### 2.3 Pelin käydessä.
+### 2.3 Pelin käydessä
 
 Huolehdi omasta ja muiden turvallisuudesta
 Mikäli minkäänlaisia vaaratilanteita huomataan, pysäytetään peli ”PELI SEIS!” huudolla. Peliä jatketaan ainoastaan jonkun pelinjärjestäjän huutamalla ”PELI JATKUU!” huudolla.
