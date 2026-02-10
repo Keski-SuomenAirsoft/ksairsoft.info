@@ -106,3 +106,9 @@ dist
 
 # ContentLayer generated files
 .contentlayer
+
+# Astro
+.astro/
+
+# Yarn
+.yarn/
