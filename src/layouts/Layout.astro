@@ -66,7 +66,7 @@ const { frontmatter } = Astro.props;
         border-radius: 8px;
       }
       article > header {
-        background-color: #ccc6be;
+        background-color: #726250;
         border-radius: 8px 8px 0 0;
       }
       article > header h1 {
@@ -139,6 +139,9 @@ const { frontmatter } = Astro.props;
       .social-link {
         height: 48px;
       }
+      .contacts {
+        grid-column: 1;
+      }
       .sponsors {
         background-color: #eae7e4;
         border-radius: 8px;
@@ -159,6 +162,29 @@ const { frontmatter } = Astro.props;
         color: white;
         padding: 16px;
         text-align: center;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          padding: 0.5rem;
+        }
+        main {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+        .sidebar {
+          order: 1;
+        }
+        article {
+          order: 2;
+        }
+        .contacts {
+          order: 3;
+        }
+        aside:last-child {
+          order: 4;
+        }
       }
     </style>
   </head>
@@ -184,6 +210,15 @@ const { frontmatter } = Astro.props;
             </ul>
           </div>
         </nav>
+
+        <article>
+          <header>
+            <h1>{frontmatter?.title || "Page"}</h1>
+          </header>
+          <div class="content-body">
+            <slot />
+          </div>
+        </article>
 
         <section class="contacts">
           <h2>Sosiaalinen media</h2>
@@ -224,33 +259,24 @@ const { frontmatter } = Astro.props;
             </ul>
           </div>
         </section>
-      </aside>
 
-      <article>
-        <header>
-          <h1>{frontmatter?.title || "Page"}</h1>
-        </header>
-        <div class="content-body">
-          <slot />
-        </div>
-      </article>
-
-      <aside>
-        <section class="sponsors">
-          <h2>Yhteistyössä</h2>
-          <div class="sponsors-body">
-            <a href="https://tierone.fi" target="_blank">
-              <Image
-                src="/sponsors/tierone.png"
-                alt="Tier One Airsoft"
-                width={300}
-                height={100}
-                loading="eager"
-                style="max-width: 100%; height: auto"
-              />
-            </a>
-          </div>
-        </section>
+        <aside>
+          <section class="sponsors">
+            <h2>Yhteistyössä</h2>
+            <div class="sponsors-body">
+              <a href="https://tierone.fi" target="_blank">
+                <Image
+                  src="/sponsors/tierone.png"
+                  alt="Tier One Airsoft"
+                  width={300}
+                  height={100}
+                  loading="eager"
+                  style="max-width: 100%; height: auto"
+                />
+              </a>
+            </div>
+          </section>
+        </aside>
       </aside>
     </main>
   </body>
