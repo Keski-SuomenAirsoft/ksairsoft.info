@@ -1,12 +1,12 @@
 ---
+layout: ../layouts/Layout.astro
 title: "Airsoft"
-slug: "airsoft"
 sort: 4
 ---
 
 ## Mitä airsoft on?
 
-![Airsoft 1](/images/airsoft_info1.jpeg)
+![Airsoft 1](../images/airsoft_info1.jpeg)
 
 Airsoft on alunperin Japanista liikkeelle lähtenyt replika-aseharrastus, joka on viime vuosina kasvanut Suomessakin varsin varteenotettavaksi harrastusmuodoksi. Itse airsoft-sanalla tarkoitetaan sekä itse harrastusta, että harrastusvälinettä, heikkotehoista muovikuulia ampuvaa asereplikaa. Yleisimmin airsoftista puhuttaessa kumminkin tarkoitetaan näillä replikoilla pelaamista. Puhkupyssy, kuten jotkut harrastajat näitä aseita leikkimielisesti kutsuvat, on siis heikkotehoinen kaasunpaineella toimiva oikeaa ampuma-asetta muistuttava harrastease, joka ampuu 6mm tai 8mm nimellishalkaisijaltaan olevaa kuulaa.
 
@@ -16,7 +16,7 @@ Aseiden heikko teho mahdollistaa niiden turvallisen käytön toista pelaajaa vas
 
 #### Pelimuodoista
 
-![Airsoft 2](/images/airsoft_info2.jpeg)
+![Airsoft 2](../images/airsoft_info2.jpeg)
 
 Airsoft-pelejä voi kuvata vaikka taistelusimulaatioksi, joskin touhu ei yleensä tuon
 termin vakavuuden asteelle pääse. Yleisesti tarkoituksena on osua vastustajan pelaajaa
@@ -46,7 +46,7 @@ Kirjoitushetkellä lähes jokaiselta suuremmalta paikkakunnalta löytyy jonkin t
 
 Harrastuksena airsoft on osoittautunut liikunnalliseksi lajiksi jonka parista monet erilaiset ihimiset ovat löytäneet vapaa-ajan viettopaikan. Laji yhdistää yhden mielenkiintoisen harrastuksen alle muun muassa liikunnan, luonnossa liikkumisen, jännityksen, ryhmätyöskentelytaidot ja avoimen kilpailuvapaan harrastupiirin jossa varmasti tapaa uusia kavereita.
 
-![Airsoft 3](/images/airsoft_info3.jpeg)
+![Airsoft 3](../images/airsoft_info3.jpeg)
 
 Tekstin on kirjoittanut Antti Kauhanen:
 

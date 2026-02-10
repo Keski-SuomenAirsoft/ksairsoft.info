@@ -1,0 +1,283 @@
+---
+import Header from "../components/Header.astro";
+import Facebook from "../components/Facebook.astro";
+import Discord from "../components/Discord.astro";
+import Github from "../components/Github.astro";
+import Kuulaportti from "../components/Kuulaportti.astro";
+import { Image } from "astro:assets";
+import tieroneImage from "../images/tierone.png";
+
+const pages = Object.values(
+  import.meta.glob("../pages/*.md", { eager: true }),
+) as Array<{
+  frontmatter: { title: string; sort?: number; slug?: string };
+  url: string;
+}>;
+
+const sortedPages = pages.sort(
+  (a, b) => (a.frontmatter.sort || 0) - (b.frontmatter.sort || 0),
+);
+
+const { frontmatter } = Astro.props;
+---
+
+<html lang="fi">
+  <head>
+    <meta charset="utf-8" />
+    <title>{frontmatter.title}</title>
+    <style>
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          sans-serif;
+        background-color: #f5f3f1;
+        margin: 0;
+        padding: 1rem;
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+        gap: 16px;
+        min-height: 100dvh;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Avenir Next", sans-serif;
+        color: #726250;
+      }
+      main {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-auto-rows: auto;
+        gap: 16px;
+        flex: 1;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+      }
+      article {
+        background-color: #eae7e4;
+        border-radius: 8px;
+      }
+      article > header {
+        background-color: #726250;
+        border-radius: 8px 8px 0 0;
+      }
+      article > header h1 {
+        color: white;
+        padding: 8px 16px;
+        margin: 0;
+        font-size: 1rem;
+      }
+      .content-body {
+        padding: 0 16px 8px 16px;
+      }
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      nav {
+        background-color: #eae7e4;
+        border-radius: 8px;
+      }
+      nav > h2 {
+        background-color: #726250;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 8px 8px 0 0;
+        margin: 0;
+        font-size: 1rem;
+      }
+      .nav-body {
+        padding: 8px;
+      }
+      .nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .nav-link {
+        font-weight: 700;
+        text-decoration: none;
+        color: inherit;
+      }
+      .nav-link:hover {
+        color: rgb(204, 198, 190);
+      }
+      .contacts {
+        background-color: #eae7e4;
+        border-radius: 8px;
+      }
+      .contacts > h2 {
+        background-color: #726250;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 8px 8px 0 0;
+        margin: 0;
+        font-size: 1rem;
+      }
+      .contacts-body {
+        padding: 8px;
+      }
+      .social-links {
+        display: flex;
+        gap: 8px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .social-link {
+        height: 48px;
+      }
+      aside:last-child {
+        grid-row: 1;
+        grid-column: 3;
+      }
+      .sponsors {
+        background-color: #eae7e4;
+        border-radius: 8px;
+      }
+      .sponsors > h2 {
+        background-color: #726250;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 8px 8px 0 0;
+        margin: 0;
+        font-size: 1rem;
+      }
+      .sponsors-body {
+        padding: 8px;
+      }
+      .footer {
+        background-color: #726250;
+        color: white;
+        padding: 16px;
+        text-align: center;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          padding: 0.5rem;
+        }
+        main {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+        .sidebar {
+          order: 1;
+        }
+        article {
+          order: 2;
+        }
+        aside:last-child {
+          order: 3;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <Header />
+
+    <main>
+      <aside class="sidebar">
+        <nav>
+          <h2>Päävalikko</h2>
+          <div class="nav-body">
+            <ul class="nav-list">
+              {
+                sortedPages.map((page) => (
+                  <li>
+                    <a href={page.url || "/"} class="nav-link">
+                      {page.frontmatter.title}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </nav>
+
+        <section class="contacts">
+          <h2>Sosiaalinen media</h2>
+          <div class="contacts-body">
+            <ul class="social-links">
+              <li>
+                <a
+                  href="https://www.facebook.com/ksairsoft"
+                  target="_blank"
+                  aria-label="Facebook"
+                  class="social-link"><Facebook /></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://discordapp.com/invite/RDCAeB8"
+                  target="_blank"
+                  aria-label="Discord"
+                  class="social-link"><Discord /></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/Keski-SuomenAirsoft/ksairsoft.info"
+                  target="_blank"
+                  aria-label="GitHub"
+                  class="social-link"><Github /></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://kuulaportti.fi/?page=team_profile&id=179#description"
+                  target="_blank"
+                  aria-label="Kuulaportti"
+                  class="social-link"><Kuulaportti /></a
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+      </aside>
+
+      <article>
+        <header>
+          <h1>{frontmatter?.title || "Page"}</h1>
+        </header>
+        <div class="content-body">
+          <slot />
+        </div>
+      </article>
+
+      <aside>
+        <section class="sponsors">
+          <h2>Yhteistyössä</h2>
+          <div class="sponsors-body">
+            <a href="https://tierone.fi" target="_blank">
+              <Image
+                src={tieroneImage}
+                alt="Tier One Airsoft"
+                width={300}
+                height={100}
+                loading="eager"
+                style="max-width: 100%; height: auto"
+              />
+            </a>
+          </div>
+        </section>
+      </aside>
+    </main>
+  </body>
+</html>

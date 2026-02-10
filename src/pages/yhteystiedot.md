@@ -1,14 +1,14 @@
 ---
+layout: ../layouts/Layout.astro
 title: Yhteystiedot
-slug: yhteystiedot
 sort: 7
 ---
 
-## Lähetä yhdistykselle sähköpostia:
+## Lähetä yhdistykselle sähköpostia
 
 [**ksairsoft@gmail.com**](mailto:ksairsoft@gmail.com)
 
-## Tai ota suoraan yhteyttä hallituksen jäseniin:
+## Tai ota suoraan yhteyttä hallituksen jäseniin
 
 **Puheenjohtaja:**
 Samuli Rinne  
