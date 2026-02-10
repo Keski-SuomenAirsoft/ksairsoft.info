@@ -9,7 +9,7 @@
     "lint": "xo"
   },
   "engines": {
-    "node": "20"
+    "node": "24"
   },
   "dependencies": {
     "astro": "5.17.1"
