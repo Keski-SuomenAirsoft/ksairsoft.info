@@ -140,14 +140,6 @@ const { frontmatter } = Astro.props;
       .social-link {
         height: 48px;
       }
-      .contacts {
-        grid-column: 1;
-        grid-row: 2;
-      }
-      article {
-        grid-row: 1 / 4;
-        grid-column: 2;
-      }
       aside:last-child {
         grid-row: 1;
         grid-column: 3;
@@ -186,14 +178,11 @@ const { frontmatter } = Astro.props;
         .sidebar {
           order: 1;
         }
-        .contacts {
+        article {
           order: 2;
         }
-        article {
-          order: 3;
-        }
         aside:last-child {
-          order: 4;
+          order: 3;
         }
       }
     </style>
@@ -220,6 +209,47 @@ const { frontmatter } = Astro.props;
             </ul>
           </div>
         </nav>
+
+        <section class="contacts">
+          <h2>Sosiaalinen media</h2>
+          <div class="contacts-body">
+            <ul class="social-links">
+              <li>
+                <a
+                  href="https://www.facebook.com/ksairsoft"
+                  target="_blank"
+                  aria-label="Facebook"
+                  class="social-link"><Facebook /></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://discordapp.com/invite/RDCAeB8"
+                  target="_blank"
+                  aria-label="Discord"
+                  class="social-link"><Discord /></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/Keski-SuomenAirsoft/ksairsoft.info"
+                  target="_blank"
+                  aria-label="GitHub"
+                  class="social-link"><Github /></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://kuulaportti.fi/?page=team_profile&id=179#description"
+                  target="_blank"
+                  aria-label="Kuulaportti"
+                  class="social-link"><Kuulaportti /></a
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+
       </aside>
 
       <article>
@@ -230,46 +260,6 @@ const { frontmatter } = Astro.props;
           <slot />
         </div>
       </article>
-
-      <section class="contacts">
-        <h2>Sosiaalinen media</h2>
-        <div class="contacts-body">
-          <ul class="social-links">
-            <li>
-              <a
-                href="https://www.facebook.com/ksairsoft"
-                target="_blank"
-                aria-label="Facebook"
-                class="social-link"><Facebook /></a
-              >
-            </li>
-            <li>
-              <a
-                href="https://discordapp.com/invite/RDCAeB8"
-                target="_blank"
-                aria-label="Discord"
-                class="social-link"><Discord /></a
-              >
-            </li>
-            <li>
-              <a
-                href="https://github.com/Keski-SuomenAirsoft/ksairsoft.info"
-                target="_blank"
-                aria-label="GitHub"
-                class="social-link"><Github /></a
-              >
-            </li>
-            <li>
-              <a
-                href="https://kuulaportti.fi/?page=team_profile&id=179#description"
-                target="_blank"
-                aria-label="Kuulaportti"
-                class="social-link"><Kuulaportti /></a
-              >
-            </li>
-          </ul>
-        </div>
-      </section>
 
       <aside>
         <section class="sponsors">
