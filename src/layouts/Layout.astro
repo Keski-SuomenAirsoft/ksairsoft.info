@@ -33,9 +33,10 @@ const { frontmatter } = Astro.props;
           "Helvetica Neue",
           sans-serif;
         background-color: #f5f3f1;
-        margin: 0;
+        margin-top: 16px;
         display: flex;
         flex-direction: column;
+        gap: 16px;
         min-height: 100dvh;
       }
       h1,
@@ -60,36 +61,116 @@ const { frontmatter } = Astro.props;
       .content-body {
         padding: 16px;
       }
+      .page-layout {
+        display: flex;
+        flex: 1;
+        gap: 16px;
+      }
+      .page-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        flex: 1;
+      }
+      .grid-layout {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 16px;
+        height: 100%;
+      }
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .nav {
+        background-color: #eae7e4;
+        border-radius: 8px;
+      }
+      .nav-header {
+        background-color: #726250;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 8px 8px 0 0;
+      }
+      .nav-body {
+        padding: 8px;
+      }
+      .nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .nav-link {
+        text-decoration: none;
+        color: inherit;
+      }
+      .contacts {
+        background-color: #eae7e4;
+        border-radius: 8px;
+      }
+      .contacts-header {
+        background-color: #726250;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 8px 8px 0 0;
+      }
+      .contacts-body {
+        padding: 8px;
+      }
+      .social-links {
+        display: flex;
+        gap: 8px;
+      }
+      .social-link {
+        height: 48px;
+      }
+      .main-column {
+        flex: 2;
+      }
+      .right-column {
+        flex: 1;
+      }
+      .sponsors {
+        background-color: #eae7e4;
+        border-radius: 8px;
+      }
+      .sponsors-header {
+        background-color: #726250;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 8px 8px 0 0;
+      }
+      .sponsors-body {
+        padding: 8px;
+      }
+      .footer {
+        background-color: #726250;
+        color: white;
+        padding: 16px;
+        text-align: center;
+      }
     </style>
   </head>
 
   <body>
     <Header />
 
-    <div style="display: flex; flex: 1; gap: 16px;">
-      <div style="max-width: 1200px; margin: 0 auto; flex: 1;">
-        <div
-          style="display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 16px; height: 100%;"
-        >
-          <div style="display: flex; flex-direction: column; gap: 16px;">
-            <nav style="background-color: #eae7e4; border-radius: 8px;">
-              <div
-                style="background-color: #726250; color: white; padding: 8px 16px; border-radius: 8px 8px 0 0;"
-              >
-                Päävalikko
-              </div>
+    <div class="page-layout">
+      <div class="page-content">
+        <div class="grid-layout">
+          <div class="sidebar">
+            <nav class="nav">
+              <div class="nav-header">Päävalikko</div>
 
-              <div style="padding: 8px;">
-                <ul
-                  style="display: flex; flex-direction: column; gap: 4px; list-style: none; margin: 0; padding: 0;"
-                >
+              <div class="nav-body">
+                <ul class="nav-list">
                   {
                     sortedPages.map((page) => (
                       <li>
-                        <a
-                          href={page.url || "/"}
-                          style="text-decoration: none; color: inherit;"
-                        >
+                        <a href={page.url || "/"} class="nav-link">
                           {page.frontmatter.title}
                         </a>
                       </li>
@@ -99,40 +180,36 @@ const { frontmatter } = Astro.props;
               </div>
             </nav>
 
-            <div style="background-color: #eae7e4; border-radius: 8px;">
-              <div
-                style="background-color: #726250; color: white; padding: 8px 16px; border-radius: 8px 8px 0 0;"
-              >
-                Yhteystiedot
-              </div>
-              <div style="padding: 8px;">
-                <div style="display: flex; gap: 8px;">
+            <div class="contacts">
+              <div class="contacts-header">Yhteystiedot</div>
+              <div class="contacts-body">
+                <div class="social-links">
                   <a
                     href="https://www.facebook.com/ksairsoft"
                     target="_blank"
-                    style="height: 48px;"><Facebook /></a
+                    class="social-link"><Facebook /></a
                   >
                   <a
                     href="https://discordapp.com/invite/RDCAeB8"
                     target="_blank"
-                    style="height: 48px;"><Discord /></a
+                    class="social-link"><Discord /></a
                   >
                   <a
                     href="https://github.com/Keski-SuomenAirsoft/ksairsoft.info"
                     target="_blank"
-                    style="height: 48px;"><Github /></a
+                    class="social-link"><Github /></a
                   >
                   <a
                     href="https://kuulaportti.fi/?page=team_profile&id=179#description"
                     target="_blank"
-                    style="height: 48px;"><Kuulaportti /></a
+                    class="social-link"><Kuulaportti /></a
                   >
                 </div>
               </div>
             </div>
           </div>
 
-          <div style="flex: 2;">
+          <div class="main-column">
             <div class="main-content">
               <div class="content-header">{frontmatter?.title || "Page"}</div>
               <div class="content-body">
@@ -141,14 +218,10 @@ const { frontmatter } = Astro.props;
             </div>
           </div>
 
-          <div style="flex: 1;">
-            <div style="background-color: #eae7e4; border-radius: 8px;">
-              <div
-                style="background-color: #726250; color: white; padding: 8px 16px; border-radius: 8px 8px 0 0;"
-              >
-                Sponsorit
-              </div>
-              <div style="padding: 8px;">
+          <div class="right-column">
+            <div class="sponsors">
+              <div class="sponsors-header">Sponsorit</div>
+              <div class="sponsors-body">
                 <p>Sponsor logos here</p>
               </div>
             </div>
@@ -157,9 +230,7 @@ const { frontmatter } = Astro.props;
       </div>
     </div>
 
-    <div
-      style="background-color: #726250; color: white; padding: 16px; text-align: center;"
-    >
+    <div class="footer">
       <p>&copy; 2023 KS Airsoft ry</p>
     </div>
   </body>
