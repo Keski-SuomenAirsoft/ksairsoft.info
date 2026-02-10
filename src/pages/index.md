@@ -1,7 +1,6 @@
 ---
 layout: ../layouts/Layout.astro
 title: Etusivu
-slug: ''
 sort: 1
 ---
 

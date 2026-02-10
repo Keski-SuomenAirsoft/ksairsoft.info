@@ -1,7 +1,6 @@
 ---
 layout: ../layouts/Layout.astro
 title: Yhdistys
-slug: 'yhdistys'
 sort: 2
 ---
 

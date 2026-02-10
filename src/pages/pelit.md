@@ -1,7 +1,6 @@
 ---
 layout: ../layouts/Layout.astro
 title: Tulevat pelit
-slug: pelit
 sort: 8
 ---
 

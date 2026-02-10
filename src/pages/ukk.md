@@ -1,7 +1,6 @@
 ---
 layout: ../layouts/Layout.astro
 title: UKK / FAQ
-slug: ukk
 sort: 6
 ---
 

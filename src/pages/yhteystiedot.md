@@ -1,7 +1,6 @@
 ---
 layout: ../layouts/Layout.astro
 title: Yhteystiedot
-slug: yhteystiedot
 sort: 7
 ---
 
