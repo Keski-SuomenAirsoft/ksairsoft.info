@@ -71,4 +71,4 @@ yarn dev
 
 Open [http://localhost:4321](http://localhost:4321) with your browser to see the local development preview.
 
-You can start editing the pages by modifying `src/pages/<page>.md`. The page auto-updates as you edit the file.
+You can start editing the pages by modifying `src/pages/<page>.md`. The page auto-refreshes as you edit the file.
