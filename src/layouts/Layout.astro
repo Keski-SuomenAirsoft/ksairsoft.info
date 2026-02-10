@@ -55,7 +55,8 @@ const { frontmatter } = Astro.props;
       main {
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
-        gap: 16px;
+        grid-auto-rows: auto;
+        gap: 8px;
         flex: 1;
         max-width: 1200px;
         margin: 0 auto;
@@ -141,6 +142,15 @@ const { frontmatter } = Astro.props;
       }
       .contacts {
         grid-column: 1;
+        grid-row: 2;
+      }
+      article {
+        grid-row: 1 / 4;
+        grid-column: 2;
+      }
+      aside:last-child {
+        grid-row: 1;
+        grid-column: 3;
       }
       .sponsors {
         background-color: #eae7e4;
@@ -176,10 +186,10 @@ const { frontmatter } = Astro.props;
         .sidebar {
           order: 1;
         }
-        article {
+        .contacts {
           order: 2;
         }
-        .contacts {
+        article {
           order: 3;
         }
         aside:last-child {
@@ -210,73 +220,73 @@ const { frontmatter } = Astro.props;
             </ul>
           </div>
         </nav>
+      </aside>
 
-        <article>
-          <header>
-            <h1>{frontmatter?.title || "Page"}</h1>
-          </header>
-          <div class="content-body">
-            <slot />
-          </div>
-        </article>
+      <article>
+        <header>
+          <h1>{frontmatter?.title || "Page"}</h1>
+        </header>
+        <div class="content-body">
+          <slot />
+        </div>
+      </article>
 
-        <section class="contacts">
-          <h2>Sosiaalinen media</h2>
-          <div class="contacts-body">
-            <ul class="social-links">
-              <li>
-                <a
-                  href="https://www.facebook.com/ksairsoft"
-                  target="_blank"
-                  aria-label="Facebook"
-                  class="social-link"><Facebook /></a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://discordapp.com/invite/RDCAeB8"
-                  target="_blank"
-                  aria-label="Discord"
-                  class="social-link"><Discord /></a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://github.com/Keski-SuomenAirsoft/ksairsoft.info"
-                  target="_blank"
-                  aria-label="GitHub"
-                  class="social-link"><Github /></a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://kuulaportti.fi/?page=team_profile&id=179#description"
-                  target="_blank"
-                  aria-label="Kuulaportti"
-                  class="social-link"><Kuulaportti /></a
-                >
-              </li>
-            </ul>
+      <section class="contacts">
+        <h2>Sosiaalinen media</h2>
+        <div class="contacts-body">
+          <ul class="social-links">
+            <li>
+              <a
+                href="https://www.facebook.com/ksairsoft"
+                target="_blank"
+                aria-label="Facebook"
+                class="social-link"><Facebook /></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://discordapp.com/invite/RDCAeB8"
+                target="_blank"
+                aria-label="Discord"
+                class="social-link"><Discord /></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/Keski-SuomenAirsoft/ksairsoft.info"
+                target="_blank"
+                aria-label="GitHub"
+                class="social-link"><Github /></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://kuulaportti.fi/?page=team_profile&id=179#description"
+                target="_blank"
+                aria-label="Kuulaportti"
+                class="social-link"><Kuulaportti /></a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <aside>
+        <section class="sponsors">
+          <h2>Yhteistyössä</h2>
+          <div class="sponsors-body">
+            <a href="https://tierone.fi" target="_blank">
+              <Image
+                src="/sponsors/tierone.png"
+                alt="Tier One Airsoft"
+                width={300}
+                height={100}
+                loading="eager"
+                style="max-width: 100%; height: auto"
+              />
+            </a>
           </div>
         </section>
-
-        <aside>
-          <section class="sponsors">
-            <h2>Yhteistyössä</h2>
-            <div class="sponsors-body">
-              <a href="https://tierone.fi" target="_blank">
-                <Image
-                  src="/sponsors/tierone.png"
-                  alt="Tier One Airsoft"
-                  width={300}
-                  height={100}
-                  loading="eager"
-                  style="max-width: 100%; height: auto"
-                />
-              </a>
-            </div>
-          </section>
-        </aside>
       </aside>
     </main>
   </body>
