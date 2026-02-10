@@ -33,8 +33,10 @@ const { frontmatter } = Astro.props;
           "Helvetica Neue",
           sans-serif;
         background-color: #f5f3f1;
-        margin-top: 16px;
+        margin: 0;
+        padding: 1rem;
         display: flex;
+        box-sizing: border-box;
         flex-direction: column;
         gap: 16px;
         min-height: 100dvh;
@@ -234,9 +236,6 @@ const { frontmatter } = Astro.props;
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer">
-      <p>&copy; 2023 KS Airsoft ry</p>
     </div>
   </body>
 </html>
