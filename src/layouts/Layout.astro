@@ -5,6 +5,7 @@ import Discord from "../components/Discord.astro";
 import Github from "../components/Github.astro";
 import Kuulaportti from "../components/Kuulaportti.astro";
 import { Image } from "astro:assets";
+import tieroneImage from "../images/tierone.png";
 
 const pages = Object.values(
   import.meta.glob("../pages/*.md", { eager: true }),
@@ -23,7 +24,7 @@ const { frontmatter } = Astro.props;
 <html lang="fi">
   <head>
     <meta charset="utf-8" />
-    <title>KS Airsoft</title>
+    <title>{frontmatter.title}</title>
     <style>
       body {
         font-family:
@@ -266,7 +267,7 @@ const { frontmatter } = Astro.props;
           <div class="sponsors-body">
             <a href="https://tierone.fi" target="_blank">
               <Image
-                src="/sponsors/tierone.png"
+                src={tieroneImage}
                 alt="Tier One Airsoft"
                 width={300}
                 height={100}
