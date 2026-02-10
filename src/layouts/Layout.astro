@@ -1,7 +1,12 @@
 ---
 import Header from "../components/Header.astro";
 
-const pages = Object.values(import.meta.glob("../pages/*.md", { eager: true }));
+const pages = Object.values(
+  import.meta.glob("../pages/*.md", { eager: true }),
+) as Array<{
+  frontmatter: { title: string; sort?: number; slug?: string };
+  url: string;
+}>;
 
 const sortedPages = pages.sort(
   (a, b) => (a.frontmatter.sort || 0) - (b.frontmatter.sort || 0),
@@ -34,18 +39,16 @@ const sortedPages = pages.sort(
                   style="display: flex; flex-direction: column; gap: 8px; list-style: none; margin: 0; padding: 0;"
                 >
                   {
-                    sortedPages
-                      .filter((p) => p.slug)
-                      .map((page) => (
-                        <li>
-                          <a
-                            href={`/${page.url}`}
-                            style="text-decoration: none; color: inherit;"
-                          >
-                            {page.data.title}
-                          </a>
-                        </li>
-                      ))
+                    sortedPages.map((page) => (
+                      <li>
+                        <a
+                          href={page.url || "/"}
+                          style="text-decoration: none; color: inherit;"
+                        >
+                          {page.frontmatter.title}
+                        </a>
+                      </li>
+                    ))
                   }
                 </ul>
               </div>
