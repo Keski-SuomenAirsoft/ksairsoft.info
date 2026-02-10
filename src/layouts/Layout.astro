@@ -21,6 +21,7 @@ const { frontmatter } = Astro.props;
 
 <html lang="fi">
   <head>
+    <meta charset="utf-8" />
     <title>KS Airsoft</title>
     <style>
       body {
@@ -50,49 +51,48 @@ const { frontmatter } = Astro.props;
         font-family: "Avenir Next", sans-serif;
         color: #726250;
       }
-      .main-content {
-        background-color: #eae7e4;
-        border-radius: 8px;
-      }
-      .content-header {
-        background-color: #ccc6be;
-        color: white;
-        padding: 8px 16px;
-        border-radius: 8px 8px 0 0;
-      }
-      .content-body {
-        padding: 0 16px 8px 16px;
-      }
-      .page-layout {
-        display: flex;
-        flex: 1;
-        gap: 16px;
-      }
-      .page-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        flex: 1;
-      }
-      .grid-layout {
+      main {
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
         gap: 16px;
-        height: 100%;
+        flex: 1;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+      }
+      article {
+        background-color: #eae7e4;
+        border-radius: 8px;
+      }
+      article > header {
+        background-color: #ccc6be;
+        border-radius: 8px 8px 0 0;
+      }
+      article > header h1 {
+        color: white;
+        padding: 8px 16px;
+        margin: 0;
+        font-size: 1.5rem;
+      }
+      .content-body {
+        padding: 0 16px 8px 16px;
       }
       .sidebar {
         display: flex;
         flex-direction: column;
         gap: 16px;
       }
-      .nav {
+      nav {
         background-color: #eae7e4;
         border-radius: 8px;
       }
-      .nav-header {
+      nav > h2 {
         background-color: #726250;
         color: white;
         padding: 8px 16px;
         border-radius: 8px 8px 0 0;
+        margin: 0;
+        font-size: 1rem;
       }
       .nav-body {
         padding: 8px;
@@ -117,11 +117,13 @@ const { frontmatter } = Astro.props;
         background-color: #eae7e4;
         border-radius: 8px;
       }
-      .contacts-header {
+      .contacts > h2 {
         background-color: #726250;
         color: white;
         padding: 8px 16px;
         border-radius: 8px 8px 0 0;
+        margin: 0;
+        font-size: 1rem;
       }
       .contacts-body {
         padding: 8px;
@@ -133,21 +135,17 @@ const { frontmatter } = Astro.props;
       .social-link {
         height: 48px;
       }
-      .main-column {
-        flex: 2;
-      }
-      .right-column {
-        flex: 1;
-      }
       .sponsors {
         background-color: #eae7e4;
         border-radius: 8px;
       }
-      .sponsors-header {
+      .sponsors > h2 {
         background-color: #726250;
         color: white;
         padding: 8px 16px;
         border-radius: 8px 8px 0 0;
+        margin: 0;
+        font-size: 1rem;
       }
       .sponsors-body {
         padding: 8px;
@@ -164,82 +162,77 @@ const { frontmatter } = Astro.props;
   <body>
     <Header />
 
-    <div class="page-layout">
-      <div class="page-content">
-        <div class="grid-layout">
-          <div class="sidebar">
-            <nav class="nav">
-              <div class="nav-header">Päävalikko</div>
+    <main>
+      <aside class="sidebar">
+        <nav>
+          <h2>Päävalikko</h2>
+          <div class="nav-body">
+            <ul class="nav-list">
+              {
+                sortedPages.map((page) => (
+                  <li>
+                    <a href={page.url || "/"} class="nav-link">
+                      {page.frontmatter.title}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </nav>
 
-              <div class="nav-body">
-                <ul class="nav-list">
-                  {
-                    sortedPages.map((page) => (
-                      <li>
-                        <a href={page.url || "/"} class="nav-link">
-                          {page.frontmatter.title}
-                        </a>
-                      </li>
-                    ))
-                  }
-                </ul>
-              </div>
-            </nav>
-
-            <div class="contacts">
-              <div class="contacts-header">Sosiaalinen media</div>
-              <div class="contacts-body">
-                <div class="social-links">
-                  <a
-                    href="https://www.facebook.com/ksairsoft"
-                    target="_blank"
-                    class="social-link"><Facebook /></a
-                  >
-                  <a
-                    href="https://discordapp.com/invite/RDCAeB8"
-                    target="_blank"
-                    class="social-link"><Discord /></a
-                  >
-                  <a
-                    href="https://github.com/Keski-SuomenAirsoft/ksairsoft.info"
-                    target="_blank"
-                    class="social-link"><Github /></a
-                  >
-                  <a
-                    href="https://kuulaportti.fi/?page=team_profile&id=179#description"
-                    target="_blank"
-                    class="social-link"><Kuulaportti /></a
-                  >
-                </div>
-              </div>
+        <section class="contacts">
+          <h2>Sosiaalinen media</h2>
+          <div class="contacts-body">
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/ksairsoft"
+                target="_blank"
+                class="social-link"><Facebook /></a
+              >
+              <a
+                href="https://discordapp.com/invite/RDCAeB8"
+                target="_blank"
+                class="social-link"><Discord /></a
+              >
+              <a
+                href="https://github.com/Keski-SuomenAirsoft/ksairsoft.info"
+                target="_blank"
+                class="social-link"><Github /></a
+              >
+              <a
+                href="https://kuulaportti.fi/?page=team_profile&id=179#description"
+                target="_blank"
+                class="social-link"><Kuulaportti /></a
+              >
             </div>
           </div>
+        </section>
+      </aside>
 
-          <div class="main-column">
-            <div class="main-content">
-              <div class="content-header">{frontmatter?.title || "Page"}</div>
-              <div class="content-body">
-                <slot />
-              </div>
-            </div>
-          </div>
-
-          <div class="right-column">
-            <div class="sponsors">
-              <div class="sponsors-header">Yhteistyössä</div>
-              <div class="sponsors-body">
-                <a href="https://tierone.fi" target="_blank">
-                  <img
-                    src="/sponsors/tierone.png"
-                    alt="Tier One Airsoft"
-                    style="max-width: 100%; height: auto"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
+      <article>
+        <header>
+          <h1>{frontmatter?.title || "Page"}</h1>
+        </header>
+        <div class="content-body">
+          <slot />
         </div>
-      </div>
-    </div>
+      </article>
+
+      <aside>
+        <section class="sponsors">
+          <h2>Yhteistyössä</h2>
+          <div class="sponsors-body">
+            <a href="https://tierone.fi" target="_blank">
+              <img
+                src="/sponsors/tierone.png"
+                alt="Tier One Airsoft"
+                style="max-width: 100%; height: auto"
+              />
+            </a>
+          </div>
+        </section>
+      </aside>
+    </main>
   </body>
 </html>
