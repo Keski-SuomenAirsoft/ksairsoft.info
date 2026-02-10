@@ -9,14 +9,12 @@
     "lint": "xo"
   },
   "engines": {
-    "node": ">=20"
+    "node": "20"
   },
   "dependencies": {
-    "@astrojs/mdx": "^3.0.0",
     "astro": "^4.0.0"
   },
   "devDependencies": {
-    "typescript": "^5.0.0",
     "xo": "^0.58.0"
   },
   "xo": {},
