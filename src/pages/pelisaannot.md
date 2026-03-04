@@ -84,7 +84,7 @@ Mikäli pääset yllättämään vastapuolen pelaajan lähietäisyydeltä, voit 
 
 ### 2.6 Puukotus sääntö
 
-Voit pudottaa vastapuolen pelaajan koskettamalla häntä kädellä ja sanomalla ”PUUKKO”. Tällöin hän putoaa pelistä. Puukotus on äänetön jolloin et ilmoita että olet pudonnut pelistä.
+Voit pudottaa vastapuolen pelaajan koskettamalla häntä kädellä ja sanomalla ”PUUKKO”. Tällöin hän putoaa pelistä. Puukotus on äänetön jolloin pudonnut pelaaja ei ilmoita että on pudonnut pelistä.
 
 ### 2.7 Kranaatti sääntö
 
