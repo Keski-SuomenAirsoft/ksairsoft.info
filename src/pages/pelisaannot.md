@@ -16,6 +16,7 @@ Silmäsuojainten tulee olla airsoft ja/tai paintball käyttöön soveltuvat (kai
 
 Kaikki aseet kronotetaan ennen pelien alkua.
 
+#### Ulkopelialueet
 Sarjatuleen kykenevät aseet: 1,6J
 
 Itselataavat kertatuleen kykenevät aseet (semi): 2,25J
@@ -28,9 +29,18 @@ Itselataavat kertatuleen kykenevät aseet (semi): 10 metriä.
 
 Manuaalisesti ladattavat kertatuleen kykenevät aseet: 20 metriä.
 
-Pelipaikka kohtaiset rajoitukset saattavat poiketa edellä mainituista.
+#### Sisäpelialueet
 
-### 1.3 Vastuu
+Sisäpelialueella saa ampua ainoastaan kerta tulta. 1.2J
+
+Pelipaikka kohtaiset rajoitukset saattavat poiketa edellä mainituista.
+### 1.3 Valaisimet ja laserosoittimet
+
+Ase valot ja muutkin valot ovat sallittuja yhdistyksen peleissä mutta niillä ei saa käyttää sokaisemistarkoituskiin. Vilkkuvat eli strobo valojen käyttö on kielletty.
+
+Kaikkien laser osoittimein käyttö on kiellettyjä yhdistyksen peleissä.
+
+### 1.4 Vastuu
 
 Pelaajat ovat pelaamassa omalla vastuulla, Keski-Suomen Airsoft Ry ei ota vastuuta henkilö-, materiaali- tai mistään muistakaan vahingoista
 
@@ -74,7 +84,7 @@ Mikäli pääset yllättämään vastapuolen pelaajan lähietäisyydeltä, voit 
 
 ### 2.6 Puukotus sääntö
 
-Voit pudottaa vastapuolen pelaajan koskettamalla häntä kädellä ja sanomalla ”PUUKKO”. Tällöin hän putoaa pelistä.
+Voit pudottaa vastapuolen pelaajan koskettamalla häntä kädellä ja sanomalla ”PUUKKO”. Tällöin hän putoaa pelistä. Puukotus on äänetön jolloin et ilmoita että olet pudonnut pelistä.
 
 ### 2.7 Kranaatti sääntö
 
