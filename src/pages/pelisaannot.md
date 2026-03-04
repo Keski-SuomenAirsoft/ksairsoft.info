@@ -47,6 +47,11 @@ Pelaajat ovat pelaamassa omalla vastuulla, Keski-Suomen Airsoft Ry ei ota vastuu
 Alkoholin tai muiden päihteiden vaikutuksen alaisena pelaaminen on EHDOTTOMASTI KIELLETTY
 Pudonneena hopin säätäminen pelin käynnissä ollessa on EHDOTTOMASTI KIELLETTY
 
+### 1.5 Alle 18-vuotiaat pelaajat
+
+Alle 18-vuotiailta pelaajilta edellytetään huoltajan allekirjoittama lupalappu peleihin osallistumsieen. 
+**[Linkki lupalappuun.](https://raw.githubusercontent.com/Keski-SuomenAirsoft/ksairsoft.info/2eef1824f818b27ca9a654fcbbe537bd46e4e878/src/images/lupalappu.pdf)**
+
 ## 2. Pelin aikana
 
 ### 2.1 Vaaratilanteet
