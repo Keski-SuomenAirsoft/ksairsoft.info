@@ -22,4 +22,4 @@ Erno Ikonen
 Arttu Seppi
 
 **Hallituksen varajäsenet:**  
-Riku Koponen, Elmeri Mäkelä, Tommi Hiles, Jussi Alvoittu
+Riku Koponen, Elmeri Mäkelä, Tommi Hiles
