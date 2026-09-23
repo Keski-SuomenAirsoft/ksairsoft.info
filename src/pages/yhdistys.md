@@ -15,10 +15,10 @@ Yhdistyksemme tavoitteena on tarjota lapsille, nuorille ja aikuisille monipuolis
 ## Jäsenyysmuodot
 
 **Varsinainen jäsen:**
-Olet yhdistyksen jäsen, sekä oikeutettu kaikkiin jäsenyysetuihimme. Sinulla on myös äänioikeus yhdistyksen kokouksissa. Alaikäraja varsinaiseksi jäseneksi on 15 vuotta. Jäsenmaksu on 10 euroa / kalenterivuosi
+Olet yhdistyksen jäsen, sekä oikeutettu kaikkiin jäsenyysetuihimme. Sinulla on myös äänioikeus yhdistyksen kokouksissa. Alaikäraja varsinaiseksi jäseneksi on 15 vuotta. Jäsenmaksu on 15 euroa / kalenterivuosi
 
 **Aktiivinen jäsen:**
-Olet yhdistyksen jäsen, mutta sinulla ei ole äänioikeutta yhdistyksen kokouksissa. Saat kaikki jäsenyysedut yhteistyökumppaneiltamme. Jäsenmaksu on 10 euroa / kalenterivuosi.
+Olet yhdistyksen jäsen, mutta sinulla ei ole äänioikeutta yhdistyksen kokouksissa. Saat kaikki jäsenyysedut yhteistyökumppaneiltamme. Jäsenmaksu on 15 euroa / kalenterivuosi.
 
 **Kannattajajäsen:**
 Tuet yhdistyksen toimintaa korkeammalla jäsenmaksulla. Sinulla ei ole äänioikeutta yhdistyksen kokouksissa, etkä ole oikeutettu jäsenyysetuihimme. Jäsenmaksu on 20 euroa / kalenterivuosi.
