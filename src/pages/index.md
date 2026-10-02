@@ -2,7 +2,13 @@
 layout: ../layouts/Layout.astro
 title: Etusivu
 sort: 1
+redirect: https://ksairsoft.yhdistysavain.fi/
 ---
+
+## Sivusto on muuttanut!
+
+Keski-Suomen airsoft ry:n uudet sivut löytyvät osoitteesta **[ksairsoft.yhdistysavain.fi](https://ksairsoft.yhdistysavain.fi/)**.
+Sinut ohjataan sinne automaattisesti. Jos näin ei tapahdu, klikkaa yllä olevaa linkkiä.
 
 ## Tervetuloa
 

@@ -11,7 +11,7 @@ import koritradeImage from "../images/koritrade.png";
 const pages = Object.values(
   import.meta.glob("../pages/*.md", { eager: true }),
 ) as Array<{
-  frontmatter: { title: string; sort?: number; slug?: string };
+  frontmatter: { title: string; sort?: number; slug?: string; redirect?: string };
   url: string;
 }>;
 
@@ -26,6 +26,14 @@ const { frontmatter } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <title>{frontmatter.title}</title>
+    {
+      frontmatter.redirect && (
+        <>
+          <meta http-equiv="refresh" content={`0; url=${frontmatter.redirect}`} />
+          <link rel="canonical" href={frontmatter.redirect} />
+        </>
+      )
+    }
     <style>
       body {
         font-family:
